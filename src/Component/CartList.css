@@ -1,0 +1,106 @@
+.whole1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: end; */
+    padding: 39px;
+    background-color: #f2f2f2;
+    flex-direction: column;
+    /* text-align: justify; */
+    /* align-content: space-around; */
+}
+
+  .single1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    text-align: initial;
+    align-items: center;
+    justify-content: space-between
+  }
+  
+  .img1 {
+    width: 115px;
+    margin-right: 10px;
+  }
+  
+  .title1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .btnd, .btni, .remove {
+    display: inline-block;
+   
+    border: none;
+    background-color: #f2f2f2;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnd:hover, .btni:hover, .remove:hover {
+    background-color: #ccc;
+  }
+  
+  .quantity {
+    margin-right: 10px;
+  }
+  
+  .price1 {
+    margin-right: 10px;
+  }
+  
+  .remove {
+    color: red;
+  }
+  
+  p {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+ .btnd{
+
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+ }
+ .btni{
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+
+ }
+ @media (max-width: 850px) {
+    .single1{
+    flex-direction: column;
+    }
+ }

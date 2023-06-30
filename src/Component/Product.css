@@ -1,0 +1,62 @@
+.whole{
+    width: 100%;
+    margin-top: 5%;
+}
+.single{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   
+
+}
+
+.color{
+    width: 10%;
+    color: brown;
+    border-radius: 50%;
+}
+.title_bag{
+    font-family: 'Alegreya Sans', sans-serif;
+    margin: 0%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.price{
+     margin:0%;
+     font-size: 1rem;
+}
+.btn_bag{
+  margin:0%;
+  margin-bottom: 12%;
+  background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ 
+}
+/* .btn_bag {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   */
+  .btn_bag:hover {
+    opacity: 0.8;
+  }
+  
+.img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.collection-heading{
+    text-align: center;
+    font-family: 'Diphylleia', serif;
+    font-size: 3rem;
+    margin-top: 5%;
+}
