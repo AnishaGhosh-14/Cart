@@ -1,18 +1,4 @@
-// import React from 'react'
-// import bag1 from '../assets/model2.jpeg'
 
-// export default function Banner() {
-//   return (
-//     <div>
-//       <div>
-//         <img src={bag1} alt="" width='40%'/>
-//       </div>
-//       <div>
-//         DIOR BAG
-//       </div>
-//     </div>
-//   )
-// }
 
 import React from 'react';
 import bag1 from '../assets/model_ban.png';
@@ -28,10 +14,11 @@ export default function Banner() {
       </div>
       <div className="text-container">
         <div className='head'>
-        <h2 className="text">DIOR BAG</h2>
+        <h2 className="text">PIOR BAG</h2>
         <p className='para'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nihil velit tempore aliquid ut sunt assumenda aspernatur suscipit dolor id.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda soluta molestias sed dolore quam, at, officiis dolores voluptatem neque veritatis, alias a! Similique est nam possimus libero ipsam accusaum, vitae impedit quis laborum!<br/>
-        S h o p  N o w </p>
+        </p>
+        <p> S h o p  N o w ➡️</p>
         </div>
         <div className='second'>
         <div className='text-container2'>

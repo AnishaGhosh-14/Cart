@@ -1,113 +1,4 @@
-/* .banner-container {
-    display: flex;
-    position: relative;
-  
-  }
-  
-  .text-container {
-    
-    position: relative;
-    z-index: 2;
-    text-align: justify;
-    left: -10%;
-    top: 4%;
-    width: 131vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .image-container {
-    position: relative;
-  }
-  
-  .image {
-    width: 76%;
-    margin-top: -11%;
-  }
-  .para{
-    font-size: 100%;
-    line-height: 1;
-    font-family: 'Alegreya Sans', sans-serif;
-    color: rgb(41, 41, 41);
-    
-    font-family: sans-serif;
-    font-family: 'Frank Ruhl Libre', serif;
 
-  }
-  .text{
-    letter-spacing: 10px;
-    font-family: 'Diphylleia', serif;
-    text-align: center;
-    font-size: 5rem;
-  }
-  
-  .text-container2 {
-    
-    z-index: 2;
-    text-align: center;
-    left: -14%;
-    top: 165%;
-    width: 36%;
-    text-align: justify;
-  }
-
-  .para2{
-    font-size: 75%;
-    line-height: 1;
-    font-family: 'Alegreya Sans', sans-serif;
-    color: rgb(41, 41, 41);
-    font-family: sans-serif;
-    font-family: 'Frank Ruhl Libre', serif;
-}
-  
-  .text2{
-    letter-spacing: 1px;
-    font-family: 'Diphylleia', serif;
-    text-align: justify;
-   
-  }
-
-  .second{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .text-container3 {
-    
-    z-index: 2;
-    text-align: center;
-    left: 59%;
-    top: 164%;
-    width: 53%;
-    text-align: justify;
-    display: flex;
-  }
-
-  .para3{
-    font-size: 50%;
-    line-height: 1;
-    font-family: 'Alegreya Sans', sans-serif;
-    color: rgb(41, 41, 41);
-    font-family: sans-serif;
-    font-family: 'Frank Ruhl Libre', serif;
-    margin-top: 34%;
-}
-  
-  .text3{
-    margin-top: -24%;
-    width: 60%;
-  }
-
-
-.head{
-    margin-top: 5%;
-    width: 100%;
-}
-
- */
 
  .banner-container {
     display: flex;
@@ -138,7 +29,7 @@
   
   .para {
     font-size: 100%;
-    line-height: 1;
+    line-height: 1.5;
     font-family: 'Alegreya Sans', sans-serif;
     color: rgb(41, 41, 41);
     font-family: sans-serif;
@@ -163,7 +54,7 @@
   
   .para2 {
     font-size: 75%;
-    line-height: 1;
+    line-height: 1.5;
     font-family: 'Alegreya Sans', sans-serif;
     color: rgb(41, 41, 41);
     font-family: sans-serif;
@@ -193,8 +84,8 @@
   }
   
   .para3 {
-    font-size: 50%;
-    line-height: 1;
+    font-size: 60%;
+    line-height: 1.5;
     font-family: 'Alegreya Sans', sans-serif;
     color: rgb(41, 41, 41);
     font-family: sans-serif;

@@ -7,6 +7,8 @@ import CartList from "./Component/CartList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Parallex from "./Component/Parallex";
 import Banner from "./Component/Banner";
+import Slider from "./Component/Slider";
+import Footer from "./Component/Footer";
 // import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function App() {
@@ -116,7 +118,7 @@ function App() {
 
 
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false); // New state to handle cart visibility
+  const [showCart, setShowCart] = useState(false); 
 
   const addToCart = (data) => {
     setCart([...cart, { ...data, quantity: 1 }]);
@@ -136,18 +138,13 @@ function App() {
       <CartList cart={cart} />
       :
       <>
-       {/* <Parallax pages={2}>
-      
-       <ParallaxLayer speed={3}> */}
         <Banner/>
+        <Slider/>
       <Product product={product} addToCart={addToCart} />
-      {/* </ParallaxLayer>
-      <ParallaxLayer speed={2}> */}
       
-       {/* </ParallaxLayer>
-      </Parallax> */}
       </>
     }
+    <Footer/>
       
      
     </>
