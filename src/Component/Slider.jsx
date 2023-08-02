@@ -11,6 +11,7 @@ import './Slider.css'
 export default function Slider() {
   return (
     <>
+    <h1 className='header'>#TRENDING</h1>
     <div className='slider'>
       <span style={{'--i': 1}}><img src={pic1} alt="" /></span>
 <span style={{'--i': 2}}><img src={pic2} alt="" /> <a href=""></a></span>

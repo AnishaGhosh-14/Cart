@@ -1,17 +1,22 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Header from "./Component/Header";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import Product from "./Component/Product";
-import CartList from "./Component/CartList";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Parallex from "./Component/Parallex";
 import Banner from "./Component/Banner";
 import Slider from "./Component/Slider";
 import Footer from "./Component/Footer";
-// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ProductDescription from "./Component/ProductDescription";
+import CartList from "./Component/CartList"
+import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import { 
+  useNavigate ,
+} from 'react-router-dom';
+
 
 function App() {
+  const navigate = useNavigate();
   const [product, setProduct] = useState([
     {
       id: 1,
@@ -21,7 +26,7 @@ function App() {
       price: 890.00,
       color: "Black",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse. " ,
     },
     {
       id: 2,
@@ -31,7 +36,7 @@ function App() {
       price: 2299.00,
       color: "Black",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 3,
@@ -41,7 +46,7 @@ function App() {
       price: 2299.00,
       color: "Pink/Patterned",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 4,
@@ -51,7 +56,7 @@ function App() {
       price: 2299.00,
       color: "Beige/Striped",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 5,
@@ -61,7 +66,7 @@ function App() {
       price: 1399.00,
       color: "White",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 6,
@@ -71,7 +76,7 @@ function App() {
       price: 1499.00,
       color: "Light Blue",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 7,
@@ -81,7 +86,7 @@ function App() {
       price: 1799.00,
       color: "Pink",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
 
     {
@@ -92,7 +97,7 @@ function App() {
       price: 1299.00,
       color: "Silver-coloured",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 9,
@@ -102,7 +107,7 @@ function App() {
       price: 1049.00,
       color: "Light blue",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
     {
       id: 10,
@@ -112,44 +117,69 @@ function App() {
       price: 2799.00,
       color: "Silver-coloured",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corrupti, ipsa esse, quos saepe aliquam nulla corporis natus vero deserunt. Veritatis similique minus quasi corporis, beatae libero quam deserunt, id inventore repudiandae nostrum explicabo. Provident dolorum aut corporis esse.",
     },
   ]);
 
+ 
 
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false); 
+  const [desp ,setDesp]=useState(true);
 
   const addToCart = (data) => {
     setCart([...cart, { ...data, quantity: 1 }]);
   };
 
   
-  
+
   
 
+ 
+  const handleBackNavigation = () => {
+    navigate('/')
+    setShowCart(false); 
+    setDesp(false); 
+  };
+
   return (
-    <>
-    <Header count={cart.length} setShowCart={setShowCart}  />
-   
-    {
-      showCart?
-      
-      <CartList cart={cart} />
-      :
+    
       <>
-        <Banner/>
-        <Slider/>
-      <Product product={product} addToCart={addToCart} />
+        <Header count={cart.length} setShowCart={setShowCart} />
+
+        {showCart ? (
+          <CartList cart={cart} />
+        ) : (
+          <>
+            
+                <Banner />
+                <Slider />
+
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<Product product={product} addToCart={addToCart} setDesp={setDesp} />}
+                    
+                  />
+               
+                <Route path="/description/:id" element={<ProductDescription product={product} addToCart={addToCart} />} />
+               
+              </Routes>
+             </>
+            
+         
+        )}
       
-      </>
-    }
-    <Footer/>
-      
+        <Footer />
+
+       
+        
      
     </>
   );
+
 }
+
 
 export default App;
 

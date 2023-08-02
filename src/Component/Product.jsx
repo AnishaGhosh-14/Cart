@@ -1,41 +1,17 @@
-// import React from 'react';
-// import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-// import './Product.css'
-
-// export default function Product({ product, addToCart, setCart }) {
-
-//   const handleAddToCart = (item) => {
-//     addToCart(item);
-//   };
-
-//   return (
-   
-//     <div className='whole' style={{ display: 'flex', flexWrap: 'wrap' }}>
-//       {product.map((item, index) => (
-//         <div  className='single' key={index} style={{ width: '30%', display: 'flex', flexDirection: 'row' }}>
-//           <div>
-//             <img className='img' src={item.image} alt="Bag Image" width="70%" />
-//             <p className='title_bag'>{item.title} {item.color}</p>
-//             <div className='color'></div>
-//             <p className='price'>Rs {item.price}/-</p>
-//             <button className='btn_bag' onClick={() => handleAddToCart(item)}>Add to Cart</button>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-   
-//   );
-// }
 
 import React, { useState } from 'react';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import './Product.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default function Product({ product, addToCart, setCart }) {
+
+export default function Product({ product, addToCart, setDesp}) {
   const handleAddToCart = (item) => {
     addToCart(item);
     item.disabled = true;
   };
+  const clickdesp=(()=>{
+  setDesp(false)
+  })
 
   return (
     <>
@@ -49,8 +25,10 @@ export default function Product({ product, addToCart, setCart }) {
             <div className='color'></div>
             <p className='price'>Rs {item.price}/-</p>
             <button className='btn_bag' onClick={() => handleAddToCart(item)} disabled={item.disabled}>
-              {item.disabled ? 'Added to Cart' : 'Add to Cart'}
+              {item.disabled ? 'Added to Cart' : 'Buy Now'}
+
             </button>
+          <button className='btn_detail'>  <Link to={`/description/${item.id}`} onClick={clickdesp}>View Details</Link></button>
           </div>
         </div>
       ))}

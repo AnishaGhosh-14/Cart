@@ -27,11 +27,11 @@
      font-size: 1rem;
 }
 .btn_bag{
-  margin:0%;
+  margin:1%;
   margin-bottom: 12%;
   background-color: black;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -59,4 +59,22 @@
     font-family: 'Diphylleia', serif;
     font-size: 3rem;
     margin-top: 5%;
+}
+.btn_detail{
+    margin:1%;
+    margin-bottom: 12%;
+    background-color: black;
+      color: white;
+      padding: 7px 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 37%;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 2%;
+    
 }
